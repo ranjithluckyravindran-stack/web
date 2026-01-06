@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="520" height="90" viewBox="0 0 520 90" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .brand-green { fill: #2ECC71; }
+      .brand-light { fill: #FFFFFF; }
+      .tagline { fill: #B5B5B5; font-size: 14px; font-family: Arial, Helvetica, sans-serif; }
+      .brand-text { font-size: 34px; font-weight: 700; font-family: Arial, Helvetica, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Shield Icon -->
+  <g transform="translate(10,10)">
+    <path class="brand-green" d="M35 0 L70 12 V42 C70 60 52 75 35 80 C18 75 0 60 0 42 V12 Z"/>
+    <path d="M20 40 L30 50 L50 30"
+          fill="none"
+          stroke="#0E2F1F"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </g>
+
+  <!-- Brand Name -->
+  <text x="100" y="45" class="brand-text">
+    <tspan class="brand-green">INFO</tspan><tspan class="brand-light">PATRON</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="100" y="68" class="tagline">
+    Securing Information. Enabling Trust.
+  </text>
+</svg>
