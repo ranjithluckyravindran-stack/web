@@ -6594,3 +6594,128 @@ header .navbar .navbar-nav{
   margin: 0 !important;
 }
 
+/* =========================================================
+   FIX: Mobile nav (SlickNav) full width + aligned
+   Add this at the VERY END of style.css
+   ========================================================= */
+@media (max-width: 991px){
+
+  /* keep header layout stable */
+  header.main-header,
+  header.main-header .header-sticky,
+  header.main-header .container-fluid,
+  header.main-header .navbar{
+    position: relative !important;
+  }
+
+  /* hamburger stays on the right */
+  .navbar{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .navbar-toggle{
+    margin-left: auto !important;
+  }
+
+  /* make the dropdown menu start from left edge and fill screen */
+  .slicknav_menu{
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    z-index: 99999 !important;
+  }
+
+  /* menu items should be left aligned and full width */
+  .slicknav_nav,
+  .slicknav_nav li,
+  .slicknav_nav a,
+  .slicknav_nav .slicknav_row{
+    width: 100% !important;
+    display: block !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+  }
+
+  /* avoid horizontal scroll */
+  html, body{
+    overflow-x: hidden !important;
+  }
+}
+/* =========================================================
+   FIX: Remove duplicate (desktop) menu on mobile + keep SlickNav only
+   Add at VERY END of style.css
+   ========================================================= */
+@media (max-width: 991px){
+
+  /* Hide desktop menu + desktop header button (prevents double menus) */
+  .main-menu .nav-menu-wrapper,
+  .main-menu .nav-menu-wrapper > ul,
+  .header-btn{
+    display: none !important;
+  }
+
+  /* Keep hamburger visible on the right */
+  .navbar{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .navbar-toggle{
+    display: block !important;
+    margin-left: auto !important;
+  }
+
+  /* Make SlickNav dropdown full width under header */
+  .slicknav_menu{
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 99999 !important;
+  }
+
+  /* Menu items aligned nicely */
+  .slicknav_nav,
+  .slicknav_nav li,
+  .slicknav_nav a,
+  .slicknav_nav .slicknav_row{
+    width: 100% !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+  }
+}
+/* =========================================================
+   FIX: SlickNav dropdown always open (force closed by default)
+   Put at VERY END of style.css
+   ========================================================= */
+/* FIX: Mobile menu not showing / blinking (SlickNav) */
+@media (max-width: 991px){
+
+  /* allow dropdown to extend outside header */
+  header.main-header,
+  header.main-header .header-sticky,
+  header.main-header .container-fluid{
+    overflow: visible !important;
+  }
+
+  /* place the dropdown below the navbar */
+  .slicknav_menu{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    z-index: 99999;
+  }
+
+  /* make sure header sits above hero */
+  header.main-header{
+    z-index: 9999;
+  }
+}
+
+
