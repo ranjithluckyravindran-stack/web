@@ -6524,3 +6524,73 @@ header.main-header .container-fluid{
     
     }
 }
+/* =========================================================
+   FIX: Make the header fully transparent (show hero video behind)
+   Put this at the VERY END of style.css
+   ========================================================= */
+
+header.main-header{
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* When sticky becomes active, keep it transparent too */
+header.main-header .header-sticky.active{
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+/* FIX: About page image box showing background strip */
+.about-image-box,
+.about-us-image,
+.about-us-image figure{
+    width: 100%;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.about-us-image img{
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover;
+}
+
+/* If column background is causing the strip */
+.about-us .col-lg-6,
+.about-us .col-md-6{
+    background: transparent !important;
+}
+
+/* Reduce height of Services page blue header */
+.page-header,
+.inner-banner,
+.breadcrumb-area {
+    min-height: auto !important;
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+}
+/* Push top menu to the far RIGHT (override template centering) */
+header .navbar .navbar-collapse,
+header .navbar .collapse.navbar-collapse{
+  display: flex !important;
+  flex: 1 1 auto !important;
+  justify-content: flex-end !important;
+}
+
+header .navbar .navbar-nav{
+  display: flex !important;
+  width: 100% !important;              /* key: lets items go to the right edge */
+  justify-content: flex-end !important; /* key: overrides center */
+  margin: 0 !important;
+}
+
